@@ -1,0 +1,21 @@
+package academy.devdojo.maratonajava.introducao;
+
+public class Aula08ArraysMultidimensionais02 {
+    static void main(String[] args) {
+        int[][] arrayInt = new int [3][];
+
+         arrayInt[0] = new int [] {0,0,0};
+         arrayInt[1] = new int [] {2,4,5,1};
+         arrayInt[2] = new int [] {5,7,9,4,2};
+
+         //forma mais simplificada
+         int[][]arrayInt2 = {{0,0},{1,2,3},{1,2,3,4,5,6}};
+
+        for (int[]arrayBase : arrayInt){
+            System.out.println("\n-----");
+            for( int num: arrayBase) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+}
