@@ -2,7 +2,7 @@ package academy.devdojo.maratonajava.exercicios;
 
 import java.util.*;
 
-public class Collections2 {
+public class Collections02 {
     public static void main(String[] args) {
         String texto = "java spring java docker java redis docker";
         List<String> palavras = List.of(texto.split(" "));
