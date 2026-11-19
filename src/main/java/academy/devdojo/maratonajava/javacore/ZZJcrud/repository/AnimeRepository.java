@@ -3,7 +3,8 @@ package academy.devdojo.maratonajava.javacore.ZZJcrud.repository;
 import academy.devdojo.maratonajava.javacore.ZZJcrud.conn.ConnectionFactory;
 import academy.devdojo.maratonajava.javacore.ZZJcrud.dominio.Anime;
 import academy.devdojo.maratonajava.javacore.ZZJcrud.dominio.Producer;
-import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Log4j2
 public class AnimeRepository {
+    private static final Logger log = LogManager.getLogger(AnimeRepository.class);
 
     public static List<Anime> findByName(String name) {
         log.info("Finding Anime by name '{}'", name);

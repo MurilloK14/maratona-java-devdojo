@@ -2,15 +2,16 @@ package academy.devdojo.maratonajava.javacore.ZZJcrud.repository;
 
 import academy.devdojo.maratonajava.javacore.ZZJcrud.conn.ConnectionFactory;
 import academy.devdojo.maratonajava.javacore.ZZJcrud.dominio.Producer;
-import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Log4j2
 public class ProducerRepository {
+    private static final Logger log = LogManager.getLogger(ProducerRepository.class);
 
     public static List<Producer> findByName(String name) {
         log.info("Finding Producer by name '{}'", name);

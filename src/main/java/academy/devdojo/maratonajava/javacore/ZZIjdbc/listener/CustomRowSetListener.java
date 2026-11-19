@@ -1,15 +1,15 @@
 package academy.devdojo.maratonajava.javacore.ZZIjdbc.listener;
 
-import lombok.SneakyThrows;
-import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.sql.RowSet;
 import javax.sql.RowSetEvent;
 import javax.sql.RowSetListener;
 import java.sql.SQLException;
 
-@Log4j2
 public class CustomRowSetListener implements RowSetListener {
+    private static final Logger log = LogManager.getLogger(CustomRowSetListener.class);
     @Override
     public void rowSetChanged(RowSetEvent event) {
         log.info("Command execute triggered");
