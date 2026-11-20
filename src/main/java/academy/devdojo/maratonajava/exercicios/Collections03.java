@@ -19,7 +19,7 @@ public class Collections03{
         produtos.sort(
                 Comparator.comparing(Produto::getValor)
                         .thenComparing(Produto::getNome));
-        
+
         System.out.println(produtos);
 
     }
